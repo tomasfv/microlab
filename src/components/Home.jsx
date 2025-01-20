@@ -7,7 +7,9 @@ import { Button, Container, Navbar, NavbarBrand,
 import socialImg from '../assets/images/Social.jpg';
 import flipCardImg from '../assets/images/FlipCard.jpg';
 import animatedTextImg from '../assets/images/AnimatedText.jpg';
-import rotationIconsImg from '../assets/images/RotationIcons.jpg';          
+import rotationIconsImg from '../assets/images/RotationIcons.jpg';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFlask }  from '@fortawesome/free-solid-svg-icons';           
 
 export default function Home(){
 
@@ -18,11 +20,14 @@ export default function Home(){
     dark
   >
     <NavbarBrand href="/">
-      MicroLab
+      MicroLab <FontAwesomeIcon className='ms-2' icon={faFlask} spin />
     </NavbarBrand>
   </Navbar>
-  
+
     <Container className='my-4'>
+      <div className='my-4 text-center'>
+        <h1>Micro frontend projects created with HMTL, CSS and Javascript.</h1>
+      </div>
       <CardGroup>
           <Card>
             <CardImg
@@ -39,10 +44,10 @@ export default function Home(){
                 className="mb-2 text-muted"
                 tag="h6"
               >
-                Card subtitle
+                Animated menu
               </CardSubtitle>
               <CardText>
-                This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
+              A stylish round button that, when clicked, expands to reveal social media icons around it. Perfect for enhancing user engagement and providing quick access to social platforms with a smooth and elegant animation.
               </CardText>
               <Link to={'/socialmenu'} target="_blank">
                 <Button color='warning'>
@@ -66,10 +71,10 @@ export default function Home(){
                 className="mb-2 text-muted"
                 tag="h6"
               >
-                Card subtitle
+                Hover card
               </CardSubtitle>
               <CardText>
-                This card has supporting text below as a natural lead-in to additional content.
+              A sleek and interactive card featuring an image on the front. When hovered over, it smoothly flips to reveal the back side, displaying profile details. Perfect for showcasing personal or professional information with a dynamic and engaging animation.
               </CardText>
               <Link to={'/flipcard'} target="_blank">
                 <Button color='warning'>
@@ -93,10 +98,10 @@ export default function Home(){
                 className="mb-2 text-muted"
                 tag="h6"
               >
-                Card subtitle
+                Landing hero
               </CardSubtitle>
               <CardText>
-                This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+              A captivating hero section for a landing page featuring an eye-catching animated text effect. This dynamic animation adds a modern and engaging touch to the page. The section also includes a sleek navigation bar for easy access to different parts of the site.
               </CardText>
               <Link to={'/animatedtext'} target="_blank">
                 <Button color='warning'>
@@ -114,16 +119,16 @@ export default function Home(){
             />
             <CardBody>
               <CardTitle tag="h5">
-                Rotation Menu Icon
+                Rotation Menu Icons
               </CardTitle>
               <CardSubtitle
                 className="mb-2 text-muted"
                 tag="h6"
               >
-                Card subtitle
+              Animated icons                
               </CardSubtitle>
               <CardText>
-                This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.
+                  A dynamic component featuring two interactive menu icon buttons with seamless toggling between open and closed states. This engaging effect enhances user experience by providing a visually intuitive way to interact with the menu.
               </CardText>
               <Link to={'/rotationicons'} target="_blank">
                 <Button color='warning'>
