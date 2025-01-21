@@ -7,6 +7,7 @@ import FlipCard from './components/FlipCard.jsx';
 import AnimatedText from './components/AnimatedText.jsx';
 import RotationIcons from './components/RotationIcons.jsx';
 import SmokeEffect from './components/SmokeEffect.jsx';
+import ScrambledText from './components/ScrambledText.jsx';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
           <Route path='/animatedtext' element={<AnimatedText/>}/>
           <Route path='/rotationicons' element={<RotationIcons/>}/>
           <Route path='/smokeeffect' element={<SmokeEffect/>}/>
+          <Route path='/scrambledtext' element={<ScrambledText/>}/>
         
         </Routes>
       </div>

@@ -6,6 +6,7 @@ import flipCardImg from '../assets/images/FlipCard.jpg';
 import animatedTextImg from '../assets/images/AnimatedText.jpg';
 import rotationIconsImg from '../assets/images/RotationIcons.jpg';
 import smokeImg from '../assets/images/smoke.jpg';
+import ScrambledText from '../assets/images/ScrambledText.jpg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFlask } from '@fortawesome/free-solid-svg-icons';
 import './Home.css';
@@ -20,18 +21,18 @@ export default function Home() {
       link: "/socialmenu"
     },
     {
+      img: smokeImg,
+      title: "Smoke Cursor Effect",
+      subtitle: "Cursor effect",
+      description: "A cool effect that generates a smoke trail following the cursor for an immersive experience.",
+      link: "/smokeeffect"
+    },
+    {
       img: flipCardImg,
       title: "3D Flip Card",
       subtitle: "Hover card",
       description: "A sleek and interactive card featuring an image on the front that flips on hover to reveal details.",
       link: "/flipcard"
-    },
-    {
-      img: animatedTextImg,
-      title: "Animated Text",
-      subtitle: "Landing hero",
-      description: "A captivating hero section for a landing page featuring an eye-catching animated text effect.",
-      link: "/animatedtext"
     },
     {
       img: rotationIconsImg,
@@ -41,11 +42,18 @@ export default function Home() {
       link: "/rotationicons"
     },
     {
-      img: smokeImg,
-      title: "Smoke Cursor Effect",
-      subtitle: "Cursor effect",
-      description: "A cool effect that generates a smoke trail following the cursor for an immersive experience.",
-      link: "/smokeeffect"
+      img: ScrambledText,
+      title: "Scrambled Text",
+      subtitle: "Text hover effect",
+      description: "Interactive text animation where letters randomly shuffle before revealing the actual text on hover",
+      link: "/scrambledtext"
+    },
+    {
+      img: animatedTextImg,
+      title: "Animated Text",
+      subtitle: "Landing hero",
+      description: "A captivating hero section for a landing page featuring an eye-catching animated text effect.",
+      link: "/animatedtext"
     },
   ];
 
