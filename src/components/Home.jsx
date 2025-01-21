@@ -8,6 +8,7 @@ import socialImg from '../assets/images/Social.jpg';
 import flipCardImg from '../assets/images/FlipCard.jpg';
 import animatedTextImg from '../assets/images/AnimatedText.jpg';
 import rotationIconsImg from '../assets/images/RotationIcons.jpg';
+import smokeImg from '../assets/images/smoke.jpg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFlask }  from '@fortawesome/free-solid-svg-icons';           
 
@@ -131,6 +132,33 @@ export default function Home(){
                   A dynamic component featuring two interactive menu icon buttons with seamless toggling between open and closed states. This engaging effect enhances user experience by providing a visually intuitive way to interact with the menu.
               </CardText>
               <Link to={'/rotationicons'} target="_blank">
+                <Button color='warning'>
+                  Live Demo
+                </Button>
+              </Link>
+            </CardBody>
+          </Card>
+          <Card>
+            <CardImg
+              alt="Card image cap"
+              src={smokeImg}
+              top
+              width="100%"
+            />
+            <CardBody>
+              <CardTitle tag="h5">
+                Smoke Cursor Effect
+              </CardTitle>
+              <CardSubtitle
+                className="mb-2 text-muted"
+                tag="h6"
+              >
+              Cursor effect                
+              </CardSubtitle>
+              <CardText>
+                  A dynamic component featuring two interactive menu icon buttons with seamless toggling between open and closed states. This engaging effect enhances user experience by providing a visually intuitive way to interact with the menu.
+              </CardText>
+              <Link to={'/smokeeffect'} target="_blank">
                 <Button color='warning'>
                   Live Demo
                 </Button>

@@ -6,6 +6,7 @@ import SocialMenu from './components/SocialMenu.jsx';
 import FlipCard from './components/FlipCard.jsx';
 import AnimatedText from './components/AnimatedText.jsx';
 import RotationIcons from './components/RotationIcons.jsx';
+import SmokeEffect from './components/SmokeEffect.jsx';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path='/flipcard' element={<FlipCard/>}/>
           <Route path='/animatedtext' element={<AnimatedText/>}/>
           <Route path='/rotationicons' element={<RotationIcons/>}/>
+          <Route path='/smokeeffect' element={<SmokeEffect/>}/>
         
         </Routes>
       </div>
