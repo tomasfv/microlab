@@ -1,174 +1,86 @@
-
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Button, Container, Navbar, NavbarBrand, 
-          CardGroup, Card, CardImg, CardBody, 
-          CardTitle, CardSubtitle, CardText } from 'reactstrap';
+import { Button, Container, Navbar, NavbarBrand, Row, Col, Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText } from 'reactstrap';
 import socialImg from '../assets/images/Social.jpg';
 import flipCardImg from '../assets/images/FlipCard.jpg';
 import animatedTextImg from '../assets/images/AnimatedText.jpg';
 import rotationIconsImg from '../assets/images/RotationIcons.jpg';
 import smokeImg from '../assets/images/smoke.jpg';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFlask }  from '@fortawesome/free-solid-svg-icons';           
+import { faFlask } from '@fortawesome/free-solid-svg-icons';
+import './Home.css';
 
-export default function Home(){
+export default function Home() {
+  const projects = [
+    {
+      img: socialImg,
+      title: "Social Network Menu",
+      subtitle: "Animated menu",
+      description: "A stylish round button that, when clicked, expands to reveal social media icons around it.",
+      link: "/socialmenu"
+    },
+    {
+      img: flipCardImg,
+      title: "3D Flip Card",
+      subtitle: "Hover card",
+      description: "A sleek and interactive card featuring an image on the front that flips on hover to reveal details.",
+      link: "/flipcard"
+    },
+    {
+      img: animatedTextImg,
+      title: "Animated Text",
+      subtitle: "Landing hero",
+      description: "A captivating hero section for a landing page featuring an eye-catching animated text effect.",
+      link: "/animatedtext"
+    },
+    {
+      img: rotationIconsImg,
+      title: "Rotation Menu Icons",
+      subtitle: "Animated icons",
+      description: "Two interactive menu icon buttons that seamlessly toggle between open and closed states.",
+      link: "/rotationicons"
+    },
+    {
+      img: smokeImg,
+      title: "Smoke Cursor Effect",
+      subtitle: "Cursor effect",
+      description: "A cool effect that generates a smoke trail following the cursor for an immersive experience.",
+      link: "/smokeeffect"
+    },
+  ];
 
   return (
     <>
-    <Navbar
-    color="dark"
-    dark
-  >
-    <NavbarBrand href="/">
-      MicroLab <FontAwesomeIcon className='ms-2' icon={faFlask} spin />
-    </NavbarBrand>
-  </Navbar>
+      <Navbar color="dark" dark>
+        <NavbarBrand href="/" className='brand-text'>
+          MicroLab <FontAwesomeIcon className='ms-2' icon={faFlask} spin />
+        </NavbarBrand>
+      </Navbar>
 
-    <Container className='my-4'>
-      <div className='my-4 text-center'>
-        <h1>Micro frontend projects created with HMTL, CSS and Javascript.</h1>
-      </div>
-      <CardGroup>
-          <Card>
-            <CardImg
-              alt="Card image cap"
-              src={socialImg}
-              top
-              width="100%"
-            />
-            <CardBody>
-              <CardTitle tag="h5">
-                Social Network Menu
-              </CardTitle>
-              <CardSubtitle
-                className="mb-2 text-muted"
-                tag="h6"
-              >
-                Animated menu
-              </CardSubtitle>
-              <CardText>
-              A stylish round button that, when clicked, expands to reveal social media icons around it. Perfect for enhancing user engagement and providing quick access to social platforms with a smooth and elegant animation.
-              </CardText>
-              <Link to={'/socialmenu'} target="_blank">
-                <Button color='warning'>
-                  Live Demo
-                </Button>
-              </Link>
-            </CardBody>
-          </Card>
-          <Card>
-            <CardImg
-              alt="Card image cap"
-              src={flipCardImg}
-              top
-              width="100%"
-            />
-            <CardBody>
-              <CardTitle tag="h5">
-                3D Flip Card
-              </CardTitle>
-              <CardSubtitle
-                className="mb-2 text-muted"
-                tag="h6"
-              >
-                Hover card
-              </CardSubtitle>
-              <CardText>
-              A sleek and interactive card featuring an image on the front. When hovered over, it smoothly flips to reveal the back side, displaying profile details. Perfect for showcasing personal or professional information with a dynamic and engaging animation.
-              </CardText>
-              <Link to={'/flipcard'} target="_blank">
-                <Button color='warning'>
-                  Live Demo
-                </Button>
-              </Link>
-            </CardBody>
-          </Card>
-          <Card>
-            <CardImg
-              alt="Card image cap"
-              src={animatedTextImg}
-              top
-              width="100%"
-            />
-            <CardBody>
-              <CardTitle tag="h5">
-                Animated Text
-              </CardTitle>
-              <CardSubtitle
-                className="mb-2 text-muted"
-                tag="h6"
-              >
-                Landing hero
-              </CardSubtitle>
-              <CardText>
-              A captivating hero section for a landing page featuring an eye-catching animated text effect. This dynamic animation adds a modern and engaging touch to the page. The section also includes a sleek navigation bar for easy access to different parts of the site.
-              </CardText>
-              <Link to={'/animatedtext'} target="_blank">
-                <Button color='warning'>
-                  Live Demo
-                </Button>
-              </Link>
-            </CardBody>
-          </Card>
-          <Card>
-            <CardImg
-              alt="Card image cap"
-              src={rotationIconsImg}
-              top
-              width="100%"
-            />
-            <CardBody>
-              <CardTitle tag="h5">
-                Rotation Menu Icons
-              </CardTitle>
-              <CardSubtitle
-                className="mb-2 text-muted"
-                tag="h6"
-              >
-              Animated icons                
-              </CardSubtitle>
-              <CardText>
-                  A dynamic component featuring two interactive menu icon buttons with seamless toggling between open and closed states. This engaging effect enhances user experience by providing a visually intuitive way to interact with the menu.
-              </CardText>
-              <Link to={'/rotationicons'} target="_blank">
-                <Button color='warning'>
-                  Live Demo
-                </Button>
-              </Link>
-            </CardBody>
-          </Card>
-          <Card>
-            <CardImg
-              alt="Card image cap"
-              src={smokeImg}
-              top
-              width="100%"
-            />
-            <CardBody>
-              <CardTitle tag="h5">
-                Smoke Cursor Effect
-              </CardTitle>
-              <CardSubtitle
-                className="mb-2 text-muted"
-                tag="h6"
-              >
-              Cursor effect                
-              </CardSubtitle>
-              <CardText>
-                  A dynamic component featuring two interactive menu icon buttons with seamless toggling between open and closed states. This engaging effect enhances user experience by providing a visually intuitive way to interact with the menu.
-              </CardText>
-              <Link to={'/smokeeffect'} target="_blank">
-                <Button color='warning'>
-                  Live Demo
-                </Button>
-              </Link>
-            </CardBody>
-          </Card>
-      </CardGroup>
-    </Container>
-      
+      <Container className='my-4'>
+        <div className='my-4 text-center home-title'>
+          <h2>A collection of tiny but mighty frontend projects!</h2> 
+          <h2>Built with HTML, CSS, and JavaScript, then converted into React components to bring them together in this interactive and playful showcase.</h2>
+        </div>
+
+        <Row>
+          {projects.map((project, index) => (
+            <Col key={index} sm="12" md="6" lg="4" className="mb-4">
+              <Card>
+                <CardImg alt={project.title} src={project.img} top width="100%" />
+                <CardBody className='home-card-body'>
+                  <CardTitle tag="h5">{project.title}</CardTitle>
+                  <CardSubtitle className="mb-2 text-muted" tag="h6">{project.subtitle}</CardSubtitle>
+                  <CardText>{project.description}</CardText>
+                  <Link to={project.link} target="_blank">
+                    <Button color='warning'>Live Demo</Button>
+                  </Link>
+                </CardBody>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container>
     </>
-
-  )
+  );
 }
